@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - BurgerFlow</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body data-page="index">
+  <header class="header">
+    <div>
+      <h1 id="nomeEmpresaHeader">BurgerFlow</h1>
+      <p>Sistema simples de gestão para hamburguerias</p>
+    </div>
+    <div class="header-actions"><span>👤 Administrador</span></div>
+  </header>
+
+  <main class="main">
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <div class="brand-icon">🍔</div>
+        <div>
+          <h2>Burger<span>Flow</span></h2>
+          <p>Sistema para hamburguerias</p>
+        </div>
+      </div>
+      <nav class="sidebar-menu">
+        <a href="index.html" data-page="index">🏠 <span>Dashboard</span></a>
+        <a href="cardapio.html" data-page="cardapio">🍔 <span>Cardápio</span></a>
+        <a href="mesas.html" data-page="mesas">🍽️ <span>Mesas</span></a>
+        <a href="clientes.html" data-page="clientes">👥 <span>Clientes</span></a>
+        <a href="financeiro.html" data-page="financeiro">💰 <span>Financeiro</span></a>
+        <a href="admin.html" data-page="admin">🔐 <span>Admin</span></a>
+        <a href="configuracoes.html" data-page="configuracoes">⚙️ <span>Configurações</span></a>
+      </nav>
+    </aside>
+    <section class="content">
+      <div class="page-title">
+        <div>
+          <h2>Dashboard</h2>
+          <p>Os dados aparecem conforme o sistema for utilizado.</p>
+        </div>
+      </div>
+      <div class="dashboard-grid">
+        <article class="card">
+          <h3>Faturamento</h3>
+          <strong class="big" id="dashFaturamento">R$ 0,00</strong>
+          <p>Total de contas fechadas</p>
+        </article>
+        <article class="card">
+          <h3>Mesas ocupadas</h3>
+          <strong class="big" id="dashMesas">0/0</strong>
+          <p>Mesas com consumo aberto</p>
+        </article>
+        <article class="card">
+          <h3>Produtos</h3>
+          <strong class="big" id="dashProdutos">0</strong>
+          <p>Produtos cadastrados</p>
+        </article>
+        <article class="card">
+          <h3>Contas fechadas</h3>
+          <strong class="big" id="dashContas">0</strong>
+          <p>Registros financeiros</p>
+        </article>
+      </div>
+      <div class="panel">
+        <h3>Resumo do sistema</h3>
+        <p>Para testar: entre no Admin, cadastre produtos, abra uma mesa, lance itens e feche a conta. Depois acesse o
+          Financeiro.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 BurgerFlow - Projeto com HTML, CSS e JavaScript</p>
+  </footer>
+
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

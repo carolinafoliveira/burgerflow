@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mesas - BurgerFlow</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body data-page="mesas">
+  <header class="header">
+    <div>
+      <h1 id="nomeEmpresaHeader">BurgerFlow</h1>
+      <p>Sistema simples de gestão para hamburguerias</p>
+    </div>
+    <div class="header-actions">
+      <span>👤 Administrador</span>
+    </div>
+  </header>
+
+  <main class="main">
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <div class="brand-icon">🍔</div>
+        <div>
+          <h2>Burger<span>Flow</span></h2>
+          <p>Sistema para hamburguerias</p>
+        </div>
+      </div>
+      <nav class="sidebar-menu">
+        <a href="index.html" data-page="index">🏠 <span>Dashboard</span></a>
+        <a href="cardapio.html" data-page="cardapio">🍔 <span>Cardápio</span></a>
+        <a href="mesas.html" data-page="mesas">🍽️ <span>Mesas</span></a>
+        <a href="clientes.html" data-page="clientes">👥 <span>Clientes</span></a>
+        <a href="financeiro.html" data-page="financeiro">💰 <span>Financeiro</span></a>
+        <a href="admin.html" data-page="admin">🔐 <span>Admin</span></a>
+        <a href="configuracoes.html" data-page="configuracoes">⚙️ <span>Configurações</span></a>
+      </nav>
+    </aside>
+    <section class="content">
+      <div class="page-title">
+        <div>
+          <h2>Controle de Mesas</h2>
+          <p>Clique em uma mesa para lançar produtos, consultar consumo ou fechar a conta.</p>
+        </div>
+      </div>
+      <div class="legend">
+        <span><b class="dot free"></b> Livre</span>
+        <span><b class="dot busy"></b> Ocupada</span>
+        <span><b class="dot bill"></b> Conta</span>
+        </div>
+          <div id="listaMesas" class="grid"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 BurgerFlow - Projeto com HTML, CSS e JavaScript</p>
+  </footer>
+
+  <div id="modalMesa" class="modal hidden">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div>
+          <h2 id="tituloMesa">Mesa</h2>
+          <p id="statusMesa">Status</p>
+        </div>
+        <button onclick="fecharModalMesa()" class="btn light">Fechar</button>
+      </div>
+      <div class="modal-body">
+        <div class="panel soft">
+          <h3>Adicionar item</h3>
+          <div class="inline-form">
+            <select id="produtoMesa"></select>
+            <input type="number" id="qtdMesa" value="1" min="1">
+            <button onclick="adicionarItemMesa()" class="btn primary">Adicionar</button>
+          </div>
+        </div>
+        <h3>Itens lançados</h3>
+        <div id="itensMesa"></div>
+        <h2 class="total">Total: R$ <span id="totalMesa">0,00</span></h2>
+        <div class="actions">
+          <button onclick="marcarContaMesa()" class="btn light">Marcar como conta</button>
+          <button onclick="fecharContaMesa()" class="btn primary">Fechar conta</button>
+          <button onclick="limparMesa()" class="btn danger">Limpar mesa</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

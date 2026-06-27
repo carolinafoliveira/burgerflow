@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - BurgerFlow</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body data-page="admin">
+  <header class="header">
+    <div>
+      <h1 id="nomeEmpresaHeader">BurgerFlow</h1>
+      <p>Sistema simples de gestão para hamburguerias</p>
+    </div>
+    <div class="header-actions"><span>👤 Administrador</span></div>
+  </header>
+
+  <main class="main">
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <div class="brand-icon">🍔</div>
+        <div>
+          <h2>Burger<span>Flow</span></h2>
+          <p>Sistema para hamburguerias</p>
+        </div>
+      </div>
+      <nav class="sidebar-menu">
+        <a href="index.html" data-page="index">🏠 <span>Dashboard</span></a>
+        <a href="cardapio.html" data-page="cardapio">🍔 <span>Cardápio</span></a>
+        <a href="mesas.html" data-page="mesas">🍽️ <span>Mesas</span></a>
+        <a href="clientes.html" data-page="clientes">👥 <span>Clientes</span></a>
+        <a href="financeiro.html" data-page="financeiro">💰 <span>Financeiro</span></a>
+        <a href="admin.html" data-page="admin">🔐 <span>Admin</span></a>
+        <a href="configuracoes.html" data-page="configuracoes">⚙️ <span>Configurações</span></a>
+      </nav>
+    </aside>
+    <section class="content">
+      <div class="page-title">
+        <div>
+          <h2>Área Administrativa</h2>
+          <p>Entre para cadastrar produtos no cardápio.</p>
+        </div>
+      </div>
+      <div id="loginAdmin" class="panel">
+        <h3>Login</h3>
+        <div class="form"><input type="text" id="usuarioAdmin" placeholder="Usuário"><input type="password"
+            id="senhaAdmin" placeholder="Senha"><button onclick="entrarAdmin()" class="btn primary">Entrar</button>
+          <p class="muted">Usuário: <strong>admin</strong> | Senha: <strong>1234</strong></p>
+        </div>
+      </div>
+      <div id="painelAdmin" class="panel hidden">
+        <h3>Cadastrar produto</h3>
+        <div class="form"><input type="text" id="produtoNome" placeholder="Nome do produto"><input type="text"
+            id="produtoDescricao" placeholder="Descrição"><input type="number" id="produtoPreco"
+            placeholder="Preço"><select id="produtoCategoria">
+            <option value="">Categoria</option>
+            <option>Hambúrguer</option>
+            <option>Acompanhamento</option>
+            <option>Bebida</option>
+            <option>Sobremesa</option>
+          </select><button onclick="cadastrarProduto()" class="btn primary">Cadastrar produto</button><button
+            onclick="sairAdmin()" class="btn danger">Sair do admin</button></div>
+      </div>
+      <h3 class="section-title">Produtos cadastrados</h3>
+      <div id="adminProdutos" class="grid"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 BurgerFlow - Projeto com HTML, CSS e JavaScript</p>
+  </footer>
+
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

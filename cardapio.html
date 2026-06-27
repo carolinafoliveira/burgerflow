@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cardápio - BurgerFlow</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body data-page="cardapio">
+  <header class="header">
+    <div>
+      <h1 id="nomeEmpresaHeader">BurgerFlow</h1>
+      <p>Sistema simples de gestão para hamburguerias</p>
+    </div>
+    <div class="header-actions"><span>👤 Administrador</span></div>
+  </header>
+
+  <main class="main">
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <div class="brand-icon">🍔</div>
+        <div>
+          <h2>Burger<span>Flow</span></h2>
+          <p>Sistema para hamburguerias</p>
+        </div>
+      </div>
+      <nav class="sidebar-menu">
+        <a href="index.html" data-page="index">🏠 <span>Dashboard</span></a>
+        <a href="cardapio.html" data-page="cardapio">🍔 <span>Cardápio</span></a>
+        <a href="mesas.html" data-page="mesas">🍽️ <span>Mesas</span></a>
+        <a href="clientes.html" data-page="clientes">👥 <span>Clientes</span></a>
+        <a href="financeiro.html" data-page="financeiro">💰 <span>Financeiro</span></a>
+        <a href="admin.html" data-page="admin">🔐 <span>Admin</span></a>
+        <a href="configuracoes.html" data-page="configuracoes">⚙️ <span>Configurações</span></a>
+      </nav>
+    </aside>
+    <section class="content">
+      <div class="page-title">
+        <div>
+          <h2>Cardápio Digital</h2>
+          <p>Produtos cadastrados pelo administrador.</p>
+        </div>
+        <a href="admin.html" class="btn primary">+ Novo produto</a>
+      </div>
+      <div id="listaProdutos" class="grid"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 BurgerFlow - Projeto com HTML, CSS e JavaScript</p>
+  </footer>
+
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
